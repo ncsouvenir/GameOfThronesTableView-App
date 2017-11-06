@@ -11,10 +11,17 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var episodes: [GOTEpisode] = []
     var sectionName: [String] = []
+    var rightCellImage = RightAlignedTableViewCell()
+    
     @IBOutlet weak var gOTTableView: UITableView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         loadEpisodeData()
+        //rightCellImage.episodePosterImage.layer.borderWidth = 2
+        //rightCellImage.episodePosterImage.layer.borderColor = UIColor.white.cgColor
+        self.rightCellImage.layer.borderWidth = 1
+        self.rightCellImage.layer.borderColor = UIColor.white.cgColor
         gOTTableView.delegate = self
         gOTTableView.dataSource = self
     }
@@ -22,6 +29,8 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         let allEpisodes = EpisodeData.allEpisodes
         let sortedEpisodeBySeason = allEpisodes.sorted{$0.season < $1.season}
         self.episodes = sortedEpisodeBySeason
+        self.gOTTableView.rowHeight = UITableViewAutomaticDimension
+        self.gOTTableView.estimatedRowHeight = 200.0
         //adding season number into the sectionname array = [1,2,3,4,5,6,7]
         for episode in episodes{
             if !sectionName.contains(String(episode.season)){
@@ -68,7 +77,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     ///Downcasting
     // Used to describe the cell at a specific row/section in a UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let leftAlignedCell = indexPath.row % 2 == 0
+        let leftAlignedCell = indexPath.section % 2 == 0
         if leftAlignedCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Left Episode Cell", for: indexPath)
             if let cell = cell as? LeftAlignedTableViewCell {

@@ -10,6 +10,7 @@ import UIKit
 
 class DetailedEpisodeViewController: UIViewController {
     
+    @IBOutlet weak var seasonEpisodeLabel: UILabel!
     @IBOutlet weak var detailedPosterImageView: UIImageView!
     @IBOutlet weak var airDateLabel: UILabel!
     @IBOutlet weak var seasonLabel: UILabel!
@@ -28,6 +29,7 @@ class DetailedEpisodeViewController: UIViewController {
             return
         }
         //set-up properties of what you want to appear in new VC
+        seasonEpisodeLabel.text = "\(String(episode.name))"
         seasonLabel.text = "Season: \(String(episode.season))"
         episodeLabel.text = "Episode: \(String(episode.number))"
         runTimeLabel.text = "Runtime: \(String(episode.runtime))"
