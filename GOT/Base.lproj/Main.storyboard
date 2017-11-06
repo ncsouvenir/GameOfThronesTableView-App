@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Game of Thrones.ttf">
+            <string>GameofThrones</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="b15-yH-EtA">
@@ -281,17 +286,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOThousesymbols" translatesAutoresizingMaskIntoConstraints="NO" id="mzr-MI-yGf">
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winter Is Coming..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-SI-wlU">
-                                <rect key="frame" x="31" y="146" width="259" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winter Is Coming..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-SI-wlU">
+                                <rect key="frame" x="8" y="225.66666666666669" width="414" height="35.000000000000057"/>
+                                <fontDescription key="fontDescription" name="GameofThrones" family="Game of Thrones" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSe-Iu-xoo">
-                                <rect key="frame" x="16" y="357" width="304" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Upcoming Seasons and Episodes">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSe-Iu-xoo">
+                                <rect key="frame" x="8" y="463.66666666666669" width="398" height="29"/>
+                                <fontDescription key="fontDescription" name="GameofThrones" family="Game of Thrones" pointSize="14"/>
+                                <state key="normal" title="View Upcoming Seasons ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -302,10 +306,16 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="PSe-Iu-xoo" firstAttribute="centerY" secondItem="7Vn-YY-Hii" secondAttribute="centerY" constant="110" id="0G4-hg-pzZ"/>
                             <constraint firstItem="mzr-MI-yGf" firstAttribute="bottom" secondItem="lhv-0H-3uE" secondAttribute="bottom" id="A8j-ej-vwq"/>
                             <constraint firstItem="mzr-MI-yGf" firstAttribute="top" secondItem="lhv-0H-3uE" secondAttribute="top" id="ADD-gZ-Njb"/>
                             <constraint firstItem="mzr-MI-yGf" firstAttribute="trailing" secondItem="lhv-0H-3uE" secondAttribute="trailing" id="Fyh-uI-CcE"/>
+                            <constraint firstItem="lfn-SI-wlU" firstAttribute="leading" secondItem="lhv-0H-3uE" secondAttribute="leading" constant="8" id="eKU-UA-MqO"/>
                             <constraint firstItem="mzr-MI-yGf" firstAttribute="leading" secondItem="lhv-0H-3uE" secondAttribute="leading" id="moU-mj-gRP"/>
+                            <constraint firstItem="PSe-Iu-xoo" firstAttribute="leading" secondItem="lhv-0H-3uE" secondAttribute="leading" constant="8" id="oSV-dW-XTG"/>
+                            <constraint firstItem="lfn-SI-wlU" firstAttribute="trailing" secondItem="lhv-0H-3uE" secondAttribute="trailing" constant="8" id="rGg-4D-GuB"/>
+                            <constraint firstItem="lhv-0H-3uE" firstAttribute="trailing" secondItem="PSe-Iu-xoo" secondAttribute="trailing" constant="8" id="vtD-ze-dVh"/>
+                            <constraint firstItem="lfn-SI-wlU" firstAttribute="centerY" secondItem="7Vn-YY-Hii" secondAttribute="centerY" constant="-125" id="ztL-JZ-uSl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lhv-0H-3uE"/>
                     </view>
@@ -318,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3Z-zq-VVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1537" y="231"/>
+            <point key="canvasLocation" x="-1595.6521739130435" y="230.70652173913047"/>
         </scene>
     </scenes>
     <resources>
