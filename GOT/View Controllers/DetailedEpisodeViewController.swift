@@ -29,11 +29,11 @@ class DetailedEpisodeViewController: UIViewController {
             return
         }
         //set-up properties of what you want to appear in new VC
-        seasonEpisodeLabel.text = "\(String(episode.name))"
-        seasonLabel.text = "Season: \(String(episode.season))"
-        episodeLabel.text = "Episode: \(String(episode.number))"
-        runTimeLabel.text = "Runtime: \(String(episode.runtime))"
-        airDateLabel.text = "Airdate: \(episode.airdate)"
+        seasonEpisodeLabel.text = " \(String(episode.name))"
+        seasonLabel.text = "Season:  \(String(episode.season))"
+        episodeLabel.text = "Episode:  \(String(episode.number))"
+        runTimeLabel.text = "Runtime:  \(String(episode.runtime))"
+        airDateLabel.text = "Airdate:  \(episode.airdate)"
         detailedPosterImageView.image = UIImage(named: episode.originalImageID)
         summaryTextView.text = episode.summary
     }

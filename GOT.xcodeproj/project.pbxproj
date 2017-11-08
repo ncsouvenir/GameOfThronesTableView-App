@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		819A91731FB0AAFD007696BD /* Game of Thrones.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819A91721FB0AA68007696BD /* Game of Thrones.ttf */; };
+		815F02BB1FB213DB00A964B4 /* RoundedAndOutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F02BA1FB213DB00A964B4 /* RoundedAndOutlinedButton.swift */; };
+		815F02BF1FB24E7500A964B4 /* Game of Thrones.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 815F02BE1FB24DA800A964B4 /* Game of Thrones.ttf */; };
 		81BB2A0C1FAE68510039DB12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB2A0B1FAE68510039DB12 /* AppDelegate.swift */; };
 		81BB2A111FAE68510039DB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BB2A0F1FAE68510039DB12 /* Main.storyboard */; };
 		81BB2A161FAE68510039DB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BB2A141FAE68510039DB12 /* LaunchScreen.storyboard */; };
@@ -42,7 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		819A91721FB0AA68007696BD /* Game of Thrones.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Game of Thrones.ttf"; path = "../../../Game of Thrones.ttf"; sourceTree = "<group>"; };
+		815F02BA1FB213DB00A964B4 /* RoundedAndOutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAndOutlinedButton.swift; sourceTree = "<group>"; };
+		815F02BE1FB24DA800A964B4 /* Game of Thrones.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Game of Thrones.ttf"; path = "../../../../Game of Thrones.ttf"; sourceTree = "<group>"; };
 		81BB2A081FAE68510039DB12 /* GOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BB2A0B1FAE68510039DB12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BB2A101FAE68510039DB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		819A91711FB0AA24007696BD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				815F02BE1FB24DA800A964B4 /* Game of Thrones.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -120,13 +123,12 @@
 		81BB2A0A1FAE68510039DB12 /* GOT */ = {
 			isa = PBXGroup;
 			children = (
-				819A91721FB0AA68007696BD /* Game of Thrones.ttf */,
 				819A91711FB0AA24007696BD /* Fonts */,
-				81BB2A0B1FAE68510039DB12 /* AppDelegate.swift */,
 				81BB2A0F1FAE68510039DB12 /* Main.storyboard */,
 				81BB2A4A1FAE6AC40039DB12 /* View Controllers */,
 				81BB2A4B1FAE6ACF0039DB12 /* Models */,
 				81BB2A4C1FAE6AE40039DB12 /* Assets.xcassets */,
+				81BB2A0B1FAE68510039DB12 /* AppDelegate.swift */,
 				81BB2A141FAE68510039DB12 /* LaunchScreen.storyboard */,
 				81BB2A171FAE68510039DB12 /* Info.plist */,
 			);
@@ -154,11 +156,12 @@
 		81BB2A4A1FAE6AC40039DB12 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				81BB2A3F1FAE6A990039DB12 /* EpisodeViewController.swift */,
 				81BB2A411FAE6A990039DB12 /* IntroductionViewController.swift */,
+				81BB2A3F1FAE6A990039DB12 /* EpisodeViewController.swift */,
 				81BB2A3E1FAE6A990039DB12 /* DetailedEpisodeViewController.swift */,
 				81BB2A401FAE6A990039DB12 /* LeftAlignedTableViewCell.swift */,
 				81BB2A3B1FAE6A980039DB12 /* RightAlignedTableViewCell.swift */,
+				815F02BA1FB213DB00A964B4 /* RoundedAndOutlinedButton.swift */,
 				81BB2A3C1FAE6A980039DB12 /* EpisodeTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -280,7 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				819A91731FB0AAFD007696BD /* Game of Thrones.ttf in Resources */,
+				815F02BF1FB24E7500A964B4 /* Game of Thrones.ttf in Resources */,
 				81BB2A161FAE68510039DB12 /* LaunchScreen.storyboard in Resources */,
 				81BEF0391FAE6E7C00713C25 /* Assets.xcassets in Resources */,
 				81BB2A111FAE68510039DB12 /* Main.storyboard in Resources */,
@@ -311,6 +314,7 @@
 				81BB2A461FAE6A990039DB12 /* DetailedEpisodeViewController.swift in Sources */,
 				81BB2A471FAE6A990039DB12 /* EpisodeViewController.swift in Sources */,
 				81BB2A421FAE6A990039DB12 /* GOTEpisdoe.swift in Sources */,
+				815F02BB1FB213DB00A964B4 /* RoundedAndOutlinedButton.swift in Sources */,
 				81BB2A481FAE6A990039DB12 /* LeftAlignedTableViewCell.swift in Sources */,
 				81BB2A491FAE6A990039DB12 /* IntroductionViewController.swift in Sources */,
 				81BB2A431FAE6A990039DB12 /* RightAlignedTableViewCell.swift in Sources */,
