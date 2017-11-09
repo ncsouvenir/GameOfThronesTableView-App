@@ -198,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-58-YcA">
-                                <rect key="frame" x="47" y="82" width="320" height="215"/>
+                                <rect key="frame" x="47" y="82" width="320" height="214.66666666666669"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season Episode Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dk-zh-9fF">
                                 <rect key="frame" x="120" y="302.66666666666674" width="174.33333333333331" height="20.333333333333314"/>
@@ -288,13 +288,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winter Is Coming..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-SI-wlU">
-                                <rect key="frame" x="8" y="226" width="414" height="35"/>
+                                <rect key="frame" x="8" y="225.66666666666669" width="414" height="35.000000000000057"/>
                                 <fontDescription key="fontDescription" name="GameofThrones" family="Game of Thrones" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSe-Iu-xoo" customClass="RoundedAndOutlinedButton" customModule="GOT" customModuleProvider="target">
-                                <rect key="frame" x="60" y="461.33333333333331" width="294" height="34"/>
+                                <rect key="frame" x="60" y="461" width="294" height="34"/>
                                 <state key="normal" title="View Upcoming Seasons ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

@@ -23,7 +23,6 @@ class DetailedEpisodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ///Check to see if you have a movie
         //make sure you have an episode....if you do set up properties
         guard let episode = episode else {
             return

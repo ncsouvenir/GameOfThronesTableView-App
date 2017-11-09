@@ -10,9 +10,8 @@ import UIKit
 class IntroductionViewController: UIViewController{
     
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var introImageView: UIImageView!
     @IBOutlet weak var winterIsComingLabel: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //loading title image

@@ -9,11 +9,9 @@
 import UIKit
 
 class LeftAlignedTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var episodeIdentifier: UILabel!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var episodePosterImage: UIImageView!
     
     

@@ -6,63 +6,59 @@
 //  Copyright © 2017 C4Q . All rights reserved.
 //
 
-//How to round and outline buttons:
-//https://stackoverflow.com/questions/38874517/how-to-make-a-simple-rounded-button-in-storyboard
-
-
+//How to round and outline buttons: https://stackoverflow.com/questions/38874517/how-to-make-a-simple-rounded-button-in-storyboard
 import UIKit
-//UISearchBarDelegate, UISearchResultsUpdating
 
 class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    //UISearchBarDelegate, UISearchResultsUpdating
     
     var episodes: [GOTEpisode] = []
     var sectionName: [String] = []
     var rightCellImage = RightAlignedTableViewCell()
-    let searchController = UISearchController(searchResultsController: nil)
+    //let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var gOTTableView: UITableView!
-    
-//    var filteredEpisodeArr: [GOTEpisode] {
-//        //make sure there is a searchterm
-//        guard let searchTerm = searchTerm, searchTerm != "" else {
-//            return episodes
-//        }
-//        //make sure there are scope titles in the searchBar
-//        guard let scopeTitles = self.searchController.searchBar.scopeButtonTitles else {
-//            return episodes
-//        }
-//        //set up search bar button titles
-//        let selectedIndex = self.searchController.searchBar.selectedScopeButtonIndex
-//        let filteringCriteria = scopeTitles[selectedIndex]
-//        //switch on filteringCriteria
-//        switch filteringCriteria{
-//        case "Titles":
-//            return episodes.filter{(episode) in
-//                episode.name.lowercased().contains(searchTerm.lowercased())
-//            }
-//        case "Summaries":
-//            return episodes.filter{(episode) in
-//                episode.summary.lowercased().contains(searchTerm.lowercased())
-//            }
-//        default:
-//            return episodes
-//        }
-//    }
+    //    var filteredEpisodeArr: [GOTEpisode] {
+    //        //make sure there is a searchterm
+    //        guard let searchTerm = searchTerm, searchTerm != "" else {
+    //            return episodes
+    //        }
+    //        //make sure there are scope titles in the searchBar
+    //        guard let scopeTitles = self.searchController.searchBar.scopeButtonTitles else {
+    //            return episodes
+    //        }
+    //        //set up search bar button titles
+    //        let selectedIndex = self.searchController.searchBar.selectedScopeButtonIndex
+    //        let filteringCriteria = scopeTitles[selectedIndex]
+    //        //switch on filteringCriteria
+    //        switch filteringCriteria{
+    //        case "Titles":
+    //            return episodes.filter{(episode) in
+    //                episode.name.lowercased().contains(searchTerm.lowercased())
+    //            }
+    //        case "Summaries":
+    //            return episodes.filter{(episode) in
+    //                episode.summary.lowercased().contains(searchTerm.lowercased())
+    //            }
+    //        default:
+    //            return episodes
+    //        }
+    //    }
     override func viewDidLoad() {
         super.viewDidLoad()
         loadEpisodeData()
         //delegates
         gOTTableView.delegate = self
         gOTTableView.dataSource = self
-//        searchController.searchBar.delegate = self
-//        searchController.searchResultsUpdater = self
-//        searchController.isActive = true
-//        searchController.obscuresBackgroundDuringPresentation = true
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        navigationItem.searchController = searchController
-//        definesPresentationContext = true
-//        ///filter button bar set up
-//        searchController.searchBar.scopeButtonTitles = ["Title", "Summary"]
+        //        searchController.searchBar.delegate = self
+        //        searchController.searchResultsUpdater = self
+        //        searchController.isActive = true
+        //        searchController.obscuresBackgroundDuringPresentation = true
+        //        searchController.hidesNavigationBarDuringPresentation = false
+        //        navigationItem.searchController = searchController
+        //        definesPresentationContext = true
+        //        ///filter button bar set up
+        //        searchController.searchBar.scopeButtonTitles = ["Title", "Summary"]
     }
     func loadEpisodeData(){
         let allEpisodes = EpisodeData.allEpisodes
@@ -84,11 +80,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     ///Optional DataSource Methods
-    //number of section headers
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionName.count
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //want to refactor...Too hard coded
         switch section {
         case 0:
             return "Season One"
@@ -109,10 +105,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return sectionName[section]
     }
+    
     ///Required Datasource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let theseEpisodes = episodes.filter{String($0.season) == sectionName[section]}
-        return theseEpisodes.count // returns the count of the episodes filteres by season
+        return theseEpisodes.count
         //filteredEpisodeArr.count
     }
     ///Downcasting
@@ -144,15 +141,15 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return UITableViewCell()
     }
-//  /// Searchbar Methods
-//    //UISearchResultsUpdating
-//    func updateSearchResults(for searchController: UISearchController) {
-//        self.searchTerm = searchController.searchBar.text
-//    }
-//    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//        gOTTableView.reloadData()
-//    }
-
+    /// Searchbar Methods
+    //UISearchResultsUpdating
+    //    func updateSearchResults(for searchController: UISearchController) {
+    //        self.searchTerm = searchController.searchBar.text
+    //    }
+    //    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    //        gOTTableView.reloadData()
+    //    }
+    
     //Preparing segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var currentSeason = episodes.filter{$0.season == gOTTableView.indexPathForSelectedRow!.section + 1}
@@ -160,11 +157,10 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Pass the selected object to the new view controller.
         //where you are going and see if its infact where you are trying to go
         if let destination = segue.destination as? DetailedEpisodeViewController{
-            ///go to VC you are changing things to and 1. check for nil and 2. set up the properties
+            ///Go to VC you are seguing to and 1. check for nil and 2. set up the properties
             //what you want to give to the DEVC:
-            ///take your episode property and set it to whatever user has selected
+            ///take episode property and set it to whatever user has selected
             let selectedRow =  self.gOTTableView.indexPathForSelectedRow!.row
-            //let selectedSeason = self.gOTTableView.indexPathForSelectedRow!.section
             let selectedEpisode = currentSeason[selectedRow]
             destination.episode = selectedEpisode
         }
