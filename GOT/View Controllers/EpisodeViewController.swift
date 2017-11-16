@@ -160,9 +160,14 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
             ///Go to VC you are seguing to and 1. check for nil and 2. set up the properties
             //what you want to give to the DEVC:
             ///take episode property and set it to whatever user has selected
-            let selectedRow =  self.gOTTableView.indexPathForSelectedRow!.row
-            let selectedEpisode = currentSeason[selectedRow]
+           
+            ///another option commented out
+            let selectedEpisode = currentSeason[gOTTableView.indexPathForSelectedRow!.row]//whatever episode the user has selceted
+//             let selectedRow =  self.gOTTableView.indexPathForSelectedRow!.row
+//            let selectedEpisode = currentSeason[selectedRow]
             destination.episode = selectedEpisode
+            
+            
         }
     }
 }
