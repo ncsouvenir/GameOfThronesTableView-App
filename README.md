@@ -107,3 +107,32 @@ In continuing to iterate on this project I would like to do the following:
 
 ### Thanks for reading and I welcome any feedback!
 
+
+
+# Option 2 Layout
+# Game Of Thrones Guide
+
+## Section 1: Project Requirements
+
+- Create and populate a tableview with the **GOTData**
+- Create sections that filter the **GOTData** by season.
+- Create two tableview cells that look like the below image. The section header is NOT a part of the tableview cell so don't focus on it.
+
+![ScreenShot](https://i.imgur.com/NM1NFbc.png))
+- Alternate the tableview cells as shown below.
+
+![](https://media.giphy.com/media/xT4ApfmOfxwVramELK/giphy.gif)
+
+- Create a detail view controller. When you select a row in the tableview it should segue to the correct detail view. Don't forget to pass the object to the detail page in the segue.
+
+![](https://media.giphy.com/media/3otWpoVBEgHIed4otG/giphy.gif)
+
+- Create a back button that segues from the detail view to the tableview.
+
+- App must be dynamically laid out for portrait mode for all devices. Use autolayout.
+
+## Section 2: Bonus
+
+- Create a search bar that filters on the name on the episode.
+- Modify search bar so the user can choose to search on Title or Description. When you filter you shouldn't have title show up.
+
